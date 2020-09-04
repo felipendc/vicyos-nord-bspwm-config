@@ -66,11 +66,6 @@ super + h
     urxvt 'htop task manager' -e htop
 
 
-# network / internet
-super + n
-    ~/.config/rofi/bin/network
-
-
 #arcolinux-logout
 #super + x
 #    arcolinux-logout
@@ -609,6 +604,10 @@ super + F11
 super + F12
     rofi -no-lazy-grab -show drun
 
+# network / internet
+super + n
+    ~/.config/rofi/bin/network
+    
 #Browser / Google-Chrome
 super + w
     google-chrome-stable
