@@ -46,14 +46,7 @@ super + F9
 super + F10
     spotify
 
-#Dmenu
-super + F11
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
-
-#Rofi
-super + F12
-    rofi -no-lazy-grab -show drun
 
 #################################################################
 # SUPER + ... KEYS
@@ -63,9 +56,6 @@ super + F12
 super + e
     atom
 
-#Browser / Google-Chrome
-super + w
-    google-chrome-stable
 
 #Conky-toggle
 super + c
@@ -74,13 +64,6 @@ super + c
 #Htop
 super + h
     urxvt 'htop task manager' -e htop
-
-
-
-# Log out / Poweroff / Lock / Reboot
-super + x
-    ~/.config/rofi/bin/powermenu
-
 
 
 # network / internet
@@ -109,9 +92,6 @@ super + v
 super + m
     pragha
 
-# Urxvt
-super + Return
-    urxvt
 
 #Xkill
 super + Escape
@@ -157,9 +137,6 @@ super + shift + s
 ctrl + alt + w
      arcolinux-welcome-app
 
-#arcolinux-tweak-tool
-ctrl + alt + e
-    arcolinux-tweak-tool
 
 #conky-rotate
 ctrl + alt + Next
@@ -193,13 +170,6 @@ ctrl + alt + f
 ctrl + alt + i
      nitrogen
 
-#arcolinux-logout
-ctrl + alt + k
-     arcolinux-logout
-
-#arcolinux-logout
-ctrl + alt + l
-    arcolinux-logout
 
 #Pamac-manager
 ctrl + alt + p
@@ -238,10 +208,7 @@ ctrl + alt + a
     xfce4-appfinder
 
 
-#Keyboard dependent
-#urxvt
-#ctrl + alt + KP_Enter
-#     urxvt
+
 
 
 #################################################################
@@ -455,13 +422,6 @@ super + space
 super + BackSpace
 		bspc monitor -f next
 
-#################################################################
-# SUPER + ALT KEYS
-#################################################################
-
-# Move floating window
-super + alt + {_,shift + }{Left,Down,Up,Right}
-	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
 
 #################################################################
 # SUPER + CONTROL KEYS
@@ -488,41 +448,20 @@ super + shift + q
 super + shift + x
 	bspc quit
 
-# Focus/swap windows by direction
-super + {_,shift + }{h,j,k,l}
-	bspc node --{focus,swap} {west,south,north,east}
 
 # Flip layout vertically/horizontally
 super + {_,shift + }a
 	bspc node @/ --flip {vertical,horizontal}
 
-# Move focused window to other monitor
-super + shift + Left
-	bspc node -m next --follow
-
-# Move focused window to other monitor
-super + shift + Right
-		bspc node -m next --follow
-
-# Move focused window to other monitor
-super + shift + Up
-	bspc node -m next --follow
-
-# Move focused window to other monitor
-super + shift + Down
-		bspc node -m next --follow
 
 #################################################################
 # SUPER + CONTROL KEYS
 #################################################################
 
 # Focus/swap windows by direction
-super + ctrl + {Left,Down,Up,Right}
-	bspc node --{focus} {west,south,north,east}
+#super + ctrl + {Left,Down,Up,Right}
+#	bspc node --{focus} {west,south,north,east}
 
-# Contract tiled space
-super + ctrl + {h,j,k,l}
-	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
 # Focus parent/brother/first/second for preselection
 super + ctrl + {e,r,t,y}
@@ -553,33 +492,7 @@ alt + shift + Tab
 alt + space
 	bspc node @/ --rotate {90,-90}
 
-#################################################################
-# ALT + SHIFT KEYS
-#################################################################
 
-# Expand tiled space
-alt + shift + {h,j,k,l}
-	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
-
-#################################################################
-# CTRL + ALT KEYS
-#################################################################
-
-# Focus next/previous window
-ctrl + alt + Left
-	bspc node --focus west
-
-# Focus next/previous window
-ctrl + alt + Right
-	bspc node --focus east
-
-# Focus Up window
-ctrl +alt + Up
-	bspc node --focus north
-
-# Focus Down window
-ctrl + alt + Down
-	bspc node --focus south
 
 #################################################################
 #################################################################
@@ -612,3 +525,98 @@ super + shift + {1-9,0}
 #    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
 #################################################################
+
+
+
+
+
+
+
+
+
+
+
+################################################################################################
+###################################### Vicyos Key bidings! #####################################
+################################################################################################
+
+
+# Move floating window
+super + alt + {_,shift + }{Left,Down,Up,Right}
+	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
+
+
+
+
+# Expand tiled space
+ctrl + alt + {Left,Down,Up,Right}
+	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+
+# Contract tiled space
+super + ctrl + {Left,Down,Up,Right}
+	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
+
+
+# Focus/swap windows by direction
+#super + {_,shift + }{Left,Down,Up,Right}
+
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node --{focus,swap} {west,south,north,east}
+
+
+# Focus next/previous window
+super + Left
+	bspc node --focus west
+
+# Focus next/previous window
+super + Right
+	bspc node --focus east
+
+# Focus Up window
+super + Up
+	bspc node --focus north
+
+# Focus Down window
+super + Down
+	bspc node --focus south
+
+
+
+    # Move focused window to other monitor
+super + alt + Left
+	bspc node -m next --follow
+
+# Move focused window to other monitor
+super + alt + Right
+		bspc node -m next --follow
+
+# Move focused window to other monitor
+super + alt + Up
+	bspc node -m next --follow
+
+# Move focused window to other monitor
+super + alt + Down
+		bspc node -m next --follow
+
+
+
+#Dmenu
+super + F11
+	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+
+#Rofi
+super + F12
+    rofi -no-lazy-grab -show drun
+
+#Browser / Google-Chrome
+super + w
+    google-chrome-stable
+
+# Log out / Poweroff / Lock / Reboot
+super + x
+    ~/.config/rofi/bin/powermenu
+
+# Urxvt
+super + Return
+    urxvt
