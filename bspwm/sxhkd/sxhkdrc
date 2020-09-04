@@ -66,15 +66,6 @@ super + h
     urxvt 'htop task manager' -e htop
 
 
-#arcolinux-logout
-#super + x
-#    arcolinux-logout
-#
-
-#Rofi theme selector
-#super + r
-#    rofi-theme-selector
-
 #Urxvt
 super + t
     urxvt
@@ -128,11 +119,6 @@ super + shift + s
 # CONTROL + ALT KEYS
 #################################################################
 
-#arcolinux-welcome-app
-#ctrl + alt + w
-#     arcolinux-welcome-app
-
-
 #conky-rotate
 ctrl + alt + Next
      conky-rotate -n
@@ -178,9 +164,6 @@ ctrl + alt + m
 ctrl + alt + u
      pavucontrol
 
-#Rofi theme selector
-ctrl + alt + r
-  rofi-theme-selector
 
 #Spotify
 ctrl + alt + s
@@ -305,9 +288,9 @@ ctrl + shift + Print
 #     FUNCTION KEYS
 #################################################################
 
-#xfce4-terminal dropdown
+#urxvt-terminal dropdown
 F12
-    xfce4-terminal --drop-down
+    urxvt --drop-down
 
 
 #################################################################
@@ -359,13 +342,6 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     xbacklight -dec 10
 
-#########################
-#        POLYBAR        #
-#########################
-
-#Hide polybar
-super + y
-    polybar-msg cmd toggle
 
 #################################################################
 #################################################################
@@ -418,13 +394,6 @@ super + BackSpace
 		bspc monitor -f next
 
 
-#################################################################
-# SUPER + CONTROL KEYS
-#################################################################
-
-# Cancel preselection
-super + ctrl + space
-	bspc node --presel-dir cancel
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -444,9 +413,6 @@ super + shift + x
 	bspc quit
 
 
-# Flip layout vertically/horizontally
-super + {_,shift + }a
-	bspc node @/ --flip {vertical,horizontal}
 
 
 #################################################################
@@ -462,9 +428,7 @@ super + {_,shift + }a
 super + ctrl + {e,r,t,y}
 	bspc node --focus @{parent,brother,first,second}
 
-# Preselect the splitting area for next window on leaf/parent
-super + ctrl + {u,i,o,p}
-	bspc node --presel-dir \~{west,south,north,east}
+
 
 # Define splitting ratio for next window on leaf/parent
 super + ctrl + {_,shift +}{1-9}
@@ -491,7 +455,7 @@ alt + space
 
 #################################################################
 #################################################################
-##################   AZERTY/QWERTY/ ... KEYBOARD#################
+##################  AZERTY/QWERTY/ ... KEYBOARD #################
 #################################################################
 #################################################################
 
@@ -525,21 +489,22 @@ super + shift + {1-9,0}
 
 
 
-
-
-
-
-
-
 ################################################################################################
 ###################################### Vicyos Key bidings! #####################################
 ################################################################################################
 
 
+# Preselect the splitting area for next window on leaf/parent
+super + ctrl + alt {Left,Down,Up,Right}
+	bspc node --presel-dir \~{west,south,north,east}
+
+# Flip layout vertically/horizontally
+super + {_,shift + }a
+	bspc node @/ --flip {vertical,horizontal}
+
 # Move floating window
 super + alt + {_,shift + }{Left,Down,Up,Right}
 	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
-
 
 
 
@@ -557,6 +522,7 @@ super + ctrl + {Left,Down,Up,Right}
 
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node --{focus,swap} {west,south,north,east}
+
 
 
 # Focus next/previous window
@@ -577,7 +543,7 @@ super + Down
 
 
 
-    # Move focused window to other monitor
+# Move focused window to other monitor
 super + alt + Left
 	bspc node -m next --follow
 
@@ -619,3 +585,24 @@ super + x
 # Urxvt
 super + Return
     urxvt
+
+# Cancel preselection
+super + ctrl + space
+	bspc node --presel-dir cancel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
