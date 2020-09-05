@@ -39,6 +39,8 @@ run xfce4-power-manager &
 numlockx on &
 blueberry-tray &
 
+# Launch notification server
+dunst &
 
 picom --config $HOME/.config/bspwm/picom.conf &
 #picom --config --experimental-backends $HOME/.config/bspwm/picom.conf &
