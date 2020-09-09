@@ -60,3 +60,7 @@ run volumeicon &
 #run atom &
 
 pkexec /usr/bin/calamares
+
+pulseaudio --kill
+
+pulseaudio --start
