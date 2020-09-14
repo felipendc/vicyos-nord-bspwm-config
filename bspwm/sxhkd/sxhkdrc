@@ -493,6 +493,11 @@ super + shift + {1-9,0}
 ###################################### Vicyos Key bidings! #####################################
 ################################################################################################
 
+
+# Range: "a console file manager"
+super + r
+	ranger
+
 # Cancel preselection
 super + ctrl + alt + space
 	bspc node --presel-dir cancel
