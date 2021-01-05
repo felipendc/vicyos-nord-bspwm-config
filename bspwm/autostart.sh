@@ -1,5 +1,12 @@
 #!/bin/bash
 
+user_name=$($USER)
+live_user"liveuser"
+
+if [ "$user_name" == "$live_user" ]; then
+  sudo pkexec /usr/bin/calamares &
+fi
+
 function run {
   if ! pgrep $1 ;
   then
@@ -58,8 +65,6 @@ run volumeicon &
 #run discord &
 #run spotify &
 #run atom &
-
-pkexec /usr/bin/calamares
 
 pulseaudio --kill
 
