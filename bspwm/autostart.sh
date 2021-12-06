@@ -1,9 +1,6 @@
 #!/bin/bash
 
-user_name=$($USER)
-live_user"liveuser"
-
-if [ "$user_name" == "$live_user" ]; then
+if [[ $USER == "liveuser" ]]; then
   sudo pkexec /usr/bin/calamares &
 fi
 
