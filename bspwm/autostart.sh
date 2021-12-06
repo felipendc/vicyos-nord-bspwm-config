@@ -5,8 +5,7 @@ if [[ $USER == "liveuser" ]]; then
 fi
 
 function run {
-  if ! pgrep $1 ;
-  then
+  if ! pgrep $1; then
     $@&
   fi
 }
